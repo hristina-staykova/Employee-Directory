@@ -21,22 +21,20 @@ class MainPage extends Component {
         element.department.toLowerCase().includes(toSearch)
     );
     return (
-      <div className="container wrapperResults">
-        <div className="container results">
-          {results.map((item, index) => (
-            <div className="row results" key={index}>
-              <img
-                className="col-2 p-1"
-                src={item.picture}
-                alt="Missing..."
-              ></img>
-              <div className="col">{item.name}</div>
-              <div className="col">{item.position}</div>
-              <div className="col">{item.department}</div>
-              <div className="col">{item.email}</div>
-            </div>
-          ))}
-        </div>
+      <div className="container results">
+        {results.map((item, index) => (
+          <div className="row results" key={index}>
+            <img
+              className="col-2 p-1"
+              src={item.picture}
+              alt="Missing..."
+            ></img>
+            <div className="col">{item.name}</div>
+            <div className="col">{item.position}</div>
+            <div className="col">{item.department}</div>
+            <div className="col">{item.email}</div>
+          </div>
+        ))}
       </div>
     );
   };
@@ -56,8 +54,24 @@ class MainPage extends Component {
             />
           </form>
         </div>
-
-        <div>{this.showResults()}</div>
+        <div className="row mainTitle text-center">
+          <div className="col-2">
+            <h4>Picture</h4>
+          </div>
+          <div className="col">
+            <h4>Name</h4>
+          </div>
+          <div className="col">
+            <h4>Position</h4>
+          </div>
+          <div className="col">
+            <h4>Department</h4>
+          </div>
+          <div className="col">
+            <h4>E-mail</h4>
+          </div>
+        </div>
+        <div className="wrapperResults">{this.showResults()}</div>
       </>
     );
   }

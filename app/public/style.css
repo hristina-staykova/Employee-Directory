@@ -1,9 +1,23 @@
 body {
+  font-family: "Roboto Condensed", sans-serif;
   background-color: azure;
+  font-size: large;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat" sans-serif;
+}
+
+footer {
+  padding: 25px 0;
+}
 div.results {
-  margin-top: 25px;
+  margin-top: 15px;
 }
 
 div.wrapperResults {
@@ -12,4 +26,8 @@ div.wrapperResults {
 
 div.col {
   margin: auto;
+}
+
+div.mainTitle {
+  margin-top: 50px;
 }
